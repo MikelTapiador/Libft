@@ -6,7 +6,7 @@
 /*   By: mtapiado <mtapiado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/20 11:43:21 by mtapiado          #+#    #+#             */
-/*   Updated: 2026/05/20 11:52:26 by mtapiado         ###   ########.fr       */
+/*   Updated: 2026/05/21 15:25:52 by mtapiado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	{
 		if (s1[i] != s2[i])
 		{
-			return ((size_t)s1[i] - (size_t)s2[i]);
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 		}
 		i++;
 	}
@@ -34,12 +34,12 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 int	main(void)
 {
 	char s1[] = "HolaX";
-	char s2[] = "HolaY";
+	char s2[] = "HolaÑ";
 	int NoP;
 	int PoN;
 	int size;
 
-	size = 5
+	size = 5;
 
 	NoP = ft_strncmp(s1, s2, size);
 	PoN = strncmp(s1, s2, size);

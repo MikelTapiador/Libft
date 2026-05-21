@@ -6,7 +6,7 @@
 /*   By: mtapiado <mtapiado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/21 10:59:52 by mtapiado          #+#    #+#             */
-/*   Updated: 2026/05/21 12:27:32 by mtapiado         ###   ########.fr       */
+/*   Updated: 2026/05/21 17:36:53 by mtapiado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*array;
 	size_t	i;
 
+	if (s == NULL)
+		return (NULL);
+	if (start >= ft_strlen(s))
+		return (ft_strdup(""));
+	if (len > ft_strlen(s) - start)
+		len = ft_strlen(s) - start;
 	array = malloc((len + 1) * sizeof(char));
 	if (array == NULL)
 		return (NULL);
@@ -35,7 +41,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char *sub;
 	
 	char string[50] = "Mikel Tapiador";
-	sub = ft_substr(string, 6, 4);
+	sub = ft_substr(string, 100, 4);
 	printf("%s\n",sub);
 	free (sub);
 	
