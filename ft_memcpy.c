@@ -6,7 +6,7 @@
 /*   By: mtapiado <mtapiado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 14:01:22 by mtapiado          #+#    #+#             */
-/*   Updated: 2026/05/19 16:31:16 by mtapiado         ###   ########.fr       */
+/*   Updated: 2026/05/21 19:04:09 by mtapiado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,15 @@
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t					i;
-	unsigned char			*ptr;
-	const unsigned char		*ptr2;
+	unsigned char			*d;
+	const unsigned char		*s;
 
 	i = 0;
-	ptr = (unsigned char *)dst;
-	ptr2 = (unsigned char *)src;
+	d = (unsigned char *)dst;
+	s = (unsigned char *)src;
 	while (i < n)
 	{
-		ptr[i] = ptr2[i];
+		d[i] = s[i];
 		i++;
 	}
 	return (dst);
