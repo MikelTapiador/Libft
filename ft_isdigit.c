@@ -3,12 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtapiado <mtapiado@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 10:54:21 by mtapiado          #+#    #+#             */
-/*   Updated: 2026/05/19 11:05:58 by mtapiado         ###   ########.fr       */
+/*   Updated: 2026/05/25 17:49:50 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <ctype.h>
+#include <stdio.h>
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {
@@ -16,9 +20,6 @@ int	ft_isdigit(int c)
 		return (1);
 	return (0);
 }
-/* #include <ctype.h>
-#include <stdio.h>
-#include "libft.h"
 
 int	main(void)
 {
@@ -31,4 +32,4 @@ int	main(void)
 	printf("%d\n", ft_isdigit('1'));
 	printf("%d\n", ft_isdigit('@'));
 	return (0);
-} */
+}
