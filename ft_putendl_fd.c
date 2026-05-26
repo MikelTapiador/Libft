@@ -1,36 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtapiado <mtapiado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/19 10:54:21 by mtapiado          #+#    #+#             */
-/*   Updated: 2026/05/26 10:52:40 by mtapiado         ###   ########.fr       */
+/*   Created: 2026/05/26 12:20:11 by mtapiado          #+#    #+#             */
+/*   Updated: 2026/05/26 12:27:29 by mtapiado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
 #include "libft.h"
 
-int	ft_isdigit(int c)
+void	ft_putendl_fd(char *s, int fd)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
+	int	i;
+
+	if (s == NULL)
+		return ;
+	i = 0;
+	while (s[i] != '\0')
+	{
+		ft_putchar_fd(s[i], fd);
+		i++;
+	}
+	ft_putchar_fd('\n', fd);
 }
 
-/* int	main(void)
+/* int main (void)
 {
-	printf("%d\n", isdigit('A'));
-	printf("%d\n", isdigit('z'));
-	printf("%d\n", isdigit('1'));
-	printf("%d\n", isdigit('@'));
-	printf("%d\n", ft_isdigit('A'));
-	printf("%d\n", ft_isdigit('z'));
-	printf("%d\n", ft_isdigit('1'));
-	printf("%d\n", ft_isdigit('@'));
-	return (0);
-}
- */
+	char c[] = "Hola caracola";
+	int fd;
+	
+	fd = 1;
+	
+	ft_putendl_fd(c,fd);
+	ft_putendl_fd(c,fd);
+	ft_putendl_fd(c,fd);
+	ft_putendl_fd(c,fd);
+	ft_putendl_fd(c,fd);
+	ft_putendl_fd(c,fd);
+
+} */

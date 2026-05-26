@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mtapiado <mtapiado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/21 15:12:42 by mtapiado          #+#    #+#             */
-/*   Updated: 2026/05/25 18:50:17 by marvin           ###   ########.fr       */
+/*   Updated: 2026/05/26 10:51:58 by mtapiado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,7 +103,7 @@ char	**ft_split(char const *s, char c)
 	return (array);
 }
 
-int main (void)
+/* int main (void)
 {
 	char array[50] = "Hola me           llamo Mikel       ";
 	char ** string;
@@ -116,4 +116,4 @@ int main (void)
 		printf("%s\n",string[i]);
 		i++;
 	}
-}
+} */

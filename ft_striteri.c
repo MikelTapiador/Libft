@@ -1,36 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtapiado <mtapiado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/19 10:54:21 by mtapiado          #+#    #+#             */
-/*   Updated: 2026/05/26 10:52:40 by mtapiado         ###   ########.fr       */
+/*   Created: 2026/05/26 10:54:03 by mtapiado          #+#    #+#             */
+/*   Updated: 2026/05/26 11:50:32 by mtapiado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
 #include "libft.h"
 
-int	ft_isdigit(int c)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
-}
+	int		i;
 
-/* int	main(void)
-{
-	printf("%d\n", isdigit('A'));
-	printf("%d\n", isdigit('z'));
-	printf("%d\n", isdigit('1'));
-	printf("%d\n", isdigit('@'));
-	printf("%d\n", ft_isdigit('A'));
-	printf("%d\n", ft_isdigit('z'));
-	printf("%d\n", ft_isdigit('1'));
-	printf("%d\n", ft_isdigit('@'));
-	return (0);
+	i = 0;
+	while (s[i] != '\0')
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }
- */
+/* void	eventoupper(unsigned int i, char *c)
+{
+	if ((i % 2 == 0) && (*c >= 97 && *c <= 122))
+		*c = *c - 32;
+}
+int	main  (void)
+{
+	char string[] = "supercalifragilisticoespialidoso";
+
+	ft_striteri(string,eventoupper);
+
+	printf("%s\n", string);
+} */
