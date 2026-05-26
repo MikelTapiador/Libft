@@ -6,7 +6,7 @@
 /*   By: mtapiado <mtapiado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/21 12:25:53 by mtapiado          #+#    #+#             */
-/*   Updated: 2026/05/21 17:44:05 by mtapiado         ###   ########.fr       */
+/*   Updated: 2026/05/26 19:19:12 by mtapiado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	j;
 	size_t	k;
 
+	if (s1 == NULL || set == NULL)
+		return (NULL);
 	i = 0;
 	j = ft_strlen(s1);
 	k = 0;

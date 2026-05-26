@@ -6,7 +6,7 @@
 /*   By: mtapiado <mtapiado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/26 10:54:03 by mtapiado          #+#    #+#             */
-/*   Updated: 2026/05/26 11:50:32 by mtapiado         ###   ########.fr       */
+/*   Updated: 2026/05/26 19:10:40 by mtapiado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	int		i;
 
 	i = 0;
+	if (s == NULL || f == NULL)
+		return ;
 	while (s[i] != '\0')
 	{
 		f(i, &s[i]);
