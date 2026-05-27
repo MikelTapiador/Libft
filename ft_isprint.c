@@ -6,9 +6,11 @@
 /*   By: mtapiado <mtapiado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 11:31:17 by mtapiado          #+#    #+#             */
-/*   Updated: 2026/05/19 11:32:39 by mtapiado         ###   ########.fr       */
+/*   Updated: 2026/05/27 09:44:18 by mtapiado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isprint(int c)
 {

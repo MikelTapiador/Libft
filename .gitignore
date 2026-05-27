@@ -1,0 +1,9 @@
+# Compiled objects
+*.o
+
+# Executables
+a.out
+
+# Testers
+libftTester/
+TestMauri/

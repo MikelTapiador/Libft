@@ -6,12 +6,10 @@
 /*   By: mtapiado <mtapiado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 10:54:21 by mtapiado          #+#    #+#             */
-/*   Updated: 2026/05/26 10:52:40 by mtapiado         ###   ########.fr       */
+/*   Updated: 2026/05/27 09:45:20 by mtapiado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
 #include "libft.h"
 
 int	ft_isdigit(int c)

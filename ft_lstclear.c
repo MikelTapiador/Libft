@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtapiado <mtapiado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/26 18:34:48 by mtapiado          #+#    #+#             */
-/*   Updated: 2026/05/27 10:24:21 by mtapiado         ###   ########.fr       */
+/*   Created: 2026/05/27 09:21:44 by mtapiado          #+#    #+#             */
+/*   Updated: 2026/05/27 10:24:13 by mtapiado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstdelone(t_list *lst, void (*del)(void*))
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
+	t_list	*temp;
+
 	if (lst == NULL || del == NULL)
 		return ;
-	del(lst -> content);
-	free (lst);
+	while (*lst != NULL)
+	{
+		temp = (*lst)-> next;
+		del((*lst)-> content);
+		free (*lst);
+		*lst = temp;
+	}
+	*lst = NULL;
 }
 
 /* void	del_content(void *content)
@@ -49,7 +57,7 @@ int main (void)
 		temp = temp->next;
 	}
 	
-	ft_lstdelone(node1, del_content);
+	ft_lstclear(&list, del_content);
 
 	while (list != NULL)
 	{

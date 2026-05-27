@@ -6,7 +6,7 @@
 /*   By: mtapiado <mtapiado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/26 17:44:58 by mtapiado          #+#    #+#             */
-/*   Updated: 2026/05/26 18:34:33 by mtapiado         ###   ########.fr       */
+/*   Updated: 2026/05/27 12:44:44 by mtapiado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,12 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	if (lst == NULL || new == NULL)
 		return ;
-	new -> next = NULL;
 	if (*lst == NULL)
 	{
 		*lst = new;
 		return ;
 	}
-	ft_lstlast(*lst) -> next = new;
+	ft_lstlast(*lst)-> next = new;
 }
 /* int	main(void)
 {
